@@ -1,0 +1,112 @@
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1614933205.1395795,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-xueyuanzang-hello-3-2-auto-mast-p6475-4cxd8[0m
+{"level":"info","ts":1614933213.8622437,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/***********/hello-3-2-auto.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1614933213.8623462,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1614933213.919085,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 1.499s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0305 08:33:41.142074      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0305 08:33:41.679685      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0305 08:33:41.682787      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0007] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0009] Executing 0 build triggers                   
+[36mINFO[0m[0009] cmd: EXPOSE                                  
+[36mINFO[0m[0009] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0009] Checking for cached layer gcr.io/ivory-nectar-300702/cache:61b26ceeb0908674791cd88231f8ba30a85f7f3456c8562c12a73c1c8c2cc046... 
+[36mINFO[0m[0009] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0009] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0015] ENV PORT 8080                                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] EXPOSE 8080                                  
+[36mINFO[0m[0015] cmd: EXPOSE                                  
+[36mINFO[0m[0015] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] WORKDIR /usr/src/app                         
+[36mINFO[0m[0015] cmd: workdir                                 
+[36mINFO[0m[0015] Changed working directory to /usr/src/app    
+[36mINFO[0m[0015] Creating directory /usr/src/app              
+[36mINFO[0m[0015] Resolving 1 paths                            
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0015] COPY . .                                     
+[36mINFO[0m[0015] Resolving 510 paths                          
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0015] Pushing layer gcr.io/ivory-nectar-300702/cache:61b26ceeb0908674791cd88231f8ba30a85f7f3456c8562c12a73c1c8c2cc046 to cache now 
+[36mINFO[0m[0015] CMD ["npm", "start"]                         
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/hello-3-2-auto to an unshallow repository
+Generating change log from git ref 5910f8c5093ec44cb1be36ba2a7c02c4c36b4e83 => 4d1dcf087fa9e0feee3f3e3f07c2a7c454dc2415
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for ***********/hello-3-2-auto and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/***********/hello-3-2-auto/releases/tag/v0.0.1
+generated: /workspace/source/charts/hello-3-2-auto/templates/release.yaml
+Created Release hello-3-2-auto-0-0-1 resource in namespace **
+Updating PipelineActivity ***********-hello-3-2-auto-master-1 with version 0.0.1
+Updated PipelineActivities ***********-hello-3-2-auto-master-1 with release notes URL: https://github.com/***********/hello-3-2-auto/releases/tag/v0.0.1
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file hello-3-2-auto-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mxueyuanzang-hello-3-2-auto-mast-p6475-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app hello-3-2-auto version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/***********/environment-jenkins-x-staging/pull/4
+Added label updatebot to Pull Request https://github.com/***********/environment-jenkins-x-staging/pull/4
+got git provider status pending from PR https://github.com/***********/environment-jenkins-x-staging/pull/4
+Pull Request https://github.com/***********/environment-jenkins-x-staging/pull/4 is merged at sha c78be1e228c1fc80062565fb939a554ba2c33a83
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names hello-3-2-auto, **-hello-3-2-auto, **-staging-hello-3-2-auto
